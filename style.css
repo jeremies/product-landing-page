@@ -1,0 +1,14 @@
+:root {
+  --white: #fbfbfb;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font: 2rem "Kufam", cursive;
+  color: var(--white);
+}
+
+/*# sourceMappingURL=style.css.map */
