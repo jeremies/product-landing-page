@@ -9,6 +9,12 @@
     href="https://fonts.googleapis.com/css2?family=Kufam&display=swap"
     rel="stylesheet"
   />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/fork-awesome@1.0.11/css/fork-awesome.min.css"
+    integrity="sha256-MGU/JUq/40CFrfxjXb5pZjpoZmxiP2KuICN5ElLFNd8="
+    crossorigin="anonymous"
+  />
 
   <link rel="stylesheet" href="style.css" />
   <script src="main.js"></script>
@@ -21,22 +27,67 @@
     <img id="header-img" src="img/original-accordions.png" />
     <nav id="nav-bar">
       <ul>
-        <li class="nav-link"><a href="#features">Features</a></li>
-        <li class="nav-link"><a href="#how-it-works">How It Works</a></li>
-        <li class="nav-link"><a href="#pricing">Pricing</a></li>
+        <li><a class="nav-link" href="#features">Features</a></li>
+        <li><a class="nav-link" href="#how-it-works">How It Works</a></li>
+        <li><a class="nav-link" href="#pricing">Pricing</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
+    <section>
+      <h1>Handcrafted, home-made masterpieces</h1>
+      <form
+        id="form"
+        method="post"
+        action="https://www.freecodecamp.com/email-submit"
+      >
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Enter your email address"
+        />
+        <input id="submit" type="submit" value="GET STARTED" />
+      </form>
+    </section>
     <section id="features">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto
-      veritatis voluptatibus ratione! Iusto voluptatum eum, eius obcaecati
-      architecto fuga consequatur necessitatibus quam debitis ut quas illo
-      excepturi numquam quaerat consectetur!
+      <div class="wrapper">
+        <div>
+          <i class="fa fa-3x fa-fire"></i>
+        </div>
+        <div>
+          <div class="title">Premium Materials</div>
+          <p>
+            Our accordions use the shiniest brass which is sourced locally. This
+            will increase the longevity of your purchase.
+          </p>
+        </div>
+        <div>
+          <i class="fa fa-3x fa-truck"></i>
+        </div>
+        <div>
+          <div class="title">Fast Shipping</div>
+          <p>
+            We make sure you recieve your accordion as soon as we have finished
+            making it. We also provide free returns if you are not satisfied.
+          </p>
+        </div>
+        <div>
+          <i class="fa fa-3x fa-battery-full"></i>
+        </div>
+        <div>
+          <div class="title">Quality Assurance</div>
+          <p>
+            For every purchase you make, we will ensure there are no damages or
+            faults and we will check and test the pitch of your instrument.
+          </p>
+        </div>
+      </div>
     </section>
     <section id="how-it-works">
       <iframe
+        id="video"
         width="560"
         height="315"
         src="https://www.youtube.com/embed/ifHRDBx-ctw"
@@ -46,9 +97,49 @@
       ></iframe>
     </section>
     <section id="pricing">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui natus veniam
-      vitae sed autem corporis architecto, dolor sint dolore molestias nisi
-      totam id fugit consectetur officia? Molestias maiores illum repellat?
+      <div class="wrapper">
+        <div class="accordion-box">
+          <div class="title">PIANO ACCORDION</div>
+          <div class="price">$600</div>
+          <div class="desc">
+            <p>Lorem ipsum.</p>
+            <p>Lorem ipsum.</p>
+            <p>Lorem ipsum dolor.</p>
+            <p>Lorem ipsum.</p>
+          </div>
+          <button>SELECT</button>
+        </div>
+        <div class="accordion-box">
+          <div class="title">DIATONIC ACCORDION</div>
+          <div class="price">$900</div>
+          <div class="desc">
+            <p>Lorem ipsum.</p>
+            <p>Lorem ipsum.</p>
+            <p>Lorem ipsum dolor.</p>
+            <p>Lorem ipsum.</p>
+          </div>
+          <button>SELECT</button>
+        </div>
+        <div class="accordion-box">
+          <div class="title">CHROMATIC ACCORDION</div>
+          <div class="price">$1200</div>
+          <div class="desc">
+            <p>Lorem ipsum.</p>
+            <p>Lorem ipsum.</p>
+            <p>Lorem ipsum dolor.</p>
+            <p>Lorem ipsum.</p>
+          </div>
+          <button>SELECT</button>
+        </div>
+      </div>
     </section>
   </main>
+  <footer>
+    <ul>
+      <li>Privacy</li>
+      <li>Terms</li>
+      <li>Contact</li>
+    </ul>
+    <p>Copyright 2020, Original Accordions</p>
+  </footer>
 </body>
