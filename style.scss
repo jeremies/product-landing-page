@@ -1,17 +1,92 @@
 $black: black;
 $red: rgb(255, 67, 67);
 $gray: #e0e0e0;
-$height-header: 80px;
+
+:root {
+  --height-header: 80px;
+}
 
 html {
   font-size: 10px;
-  scroll-padding-top: $height-header;
+  scroll-padding-top: var(--height-header);
 }
 
 body {
   font: 2rem "Kumbh Sans", sans-serif;
   color: $black;
   margin-bottom: 0;
+}
+
+@media (max-width: 900px) and (min-width: 700px) {
+  #header #nav-bar ul li {
+    float: none !important;
+  }
+
+  :root {
+    --height-header: 120px;
+  }
+}
+
+@media (max-width: 700px) and (min-width: 400px) {
+  :root {
+    --height-header: 130px;
+  }
+}
+
+@media (max-width: 700px) {
+  #header {
+    flex-direction: column;
+    justify-content: space-evenly !important;
+
+    #header-img {
+      margin-left: 0 !important;
+      margin-top: 1rem;
+    }
+
+    #nav-bar {
+      margin-right: 0 !important;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --height-header: 180px;
+  }
+
+  #header #header-img {
+    max-width: 100% !important;
+  }
+
+  #header #nav-bar ul li {
+    float: none !important;
+  }
+
+  main #pricing .wrapper {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 850px) and (min-width: 400px) {
+  main #pricing .wrapper {
+    grid-template-columns: 300px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  main #features .wrapper {
+    grid-template-columns: 1fr !important;
+
+    .icon {
+      display: none !important;
+    }
+
+    .title,
+    p {
+      text-align: center;
+    }
+  }
 }
 
 #header {
@@ -23,7 +98,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: $red;
-  height: $height-header;
+  height: var(--height-header);
 
   #header-img {
     max-width: 40rem;
@@ -40,7 +115,7 @@ body {
 
       li {
         float: left;
-        margin: 0 2rem;
+        margin: 1rem 2rem;
 
         a {
           color: $black;
@@ -52,7 +127,7 @@ body {
 }
 
 main {
-  margin-top: $height-header;
+  margin-top: var(--height-header);
 
   #form-section {
     display: flex;
@@ -133,7 +208,8 @@ main {
       width: 100rem;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      column-gap: 2rem;
+      gap: 2rem;
+      justify-content: center;
       .accordion-box {
         border: 0.3rem solid $black;
         border-radius: 0.2rem;
